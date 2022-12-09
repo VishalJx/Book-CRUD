@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const BookSection=({data})=>{
 
   const deleteBook=async(id)=>{
-        let result = await fetch(`http://localhost:5000/api/v1/delete/${id}`, 
+        let result = await fetch(`/api/v1/delete/${id}`, 
         {method :'Delete'})
         result = await result.json();
 

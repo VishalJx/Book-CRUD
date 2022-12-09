@@ -11,7 +11,7 @@ function Books(){
   useEffect(()=>{
     const fetch = async()=>{
       await axios
-      .get("http://localhost:5000/api/v1/getBooks")
+      .get("/api/v1/getBooks")
       .then((resp)=>setData(resp.data.books));
     };
     fetch();

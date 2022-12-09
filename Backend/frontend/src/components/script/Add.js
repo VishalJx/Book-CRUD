@@ -19,7 +19,7 @@ function Add(){
  }; 
  const submit = async(e)=>{
   e.preventDefault();
-    await axios.post('http://localhost:5000/api/v1/add',Data).then((resp)=>alert(resp.data.message));
+    await axios.post('/api/v1/add',Data).then((resp)=>alert(resp.data.message));
     setData({bookname:"", author:"", description:"", image:"", price:""});
     navigate('/books')
   };

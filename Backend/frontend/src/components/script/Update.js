@@ -14,7 +14,7 @@ function Update(){
   useEffect(()=>{
     const fetch = async()=>{
       await axios
-      .get(`http://localhost:5000/api/v1/getBooks/${id}`)
+      .get(`/api/v1/getBooks/${id}`)
       .then((resp)=>setDat(resp.data.books));
     };
     fetch();
@@ -27,7 +27,7 @@ function Update(){
  
  const submit = async(e)=>{
   e.preventDefault();
-    await axios.put(`http://localhost:5000/api/v1/update/${id}`,Dat).then((resp)=>alert(resp.data.message));
+    await axios.put(`/api/v1/update/${id}`,Dat).then((resp)=>alert(resp.data.message));
     setDat({bookname:"", author:"", description:"", image:"", price:""});
     navigate('/books')
   };
