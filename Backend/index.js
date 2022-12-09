@@ -10,7 +10,7 @@ app.use(express.json())
 app.use("/api/v1",routes);
 
 if(process.env.NODE_ENV =='production'){
-    app.use(express.static('public/frontend/build'));
+    app.use(express.static('public'));
 }
 
 app.listen(port, ()=>{
